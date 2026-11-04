@@ -1,0 +1,28 @@
+{
+  "name": "rmpi-library-server",
+  "version": "1.0.0",
+  "description": "REST API for the RMPI Library Management System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed": "node seed/seed.js",
+    "create-admin": "node seed/createAdmin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.11.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.8.0",
+    "multer": "^2.5.0",
+    "nodemon": "^3.1.14"
+  }
+}

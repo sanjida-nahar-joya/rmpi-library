@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-sans: 'Inter', 'Hind Siliguri', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Fraunces', 'Noto Serif Bengali', Georgia, serif;
+
+    --color-paper: #faf8f4;
+    --color-brand-50: #f1f5fb;
+    --color-brand-100: #e1e9f5;
+    --color-brand-200: #c3d2ea;
+    --color-brand-300: #97b0d8;
+    --color-brand-400: #6585c0;
+    --color-brand-500: #4466a8;
+    --color-brand-600: #34508d;
+    --color-brand-700: #2b4173;
+    --color-brand-800: #24365e;
+    --color-brand-900: #1c2a4a;
+    --color-brand-950: #121b31;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-paper font-sans text-stone-800 antialiased;
+    }
+
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+@layer components {
+    .container-page {
+        @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition focus-visible:ring-4 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60;
+    }
+
+    .btn-primary {
+        @apply bg-brand-800 text-white shadow-sm hover:bg-brand-900 focus-visible:ring-brand-200;
+    }
+
+    .btn-secondary {
+        @apply border border-stone-300 bg-white text-stone-700 shadow-xs hover:border-stone-400 hover:bg-stone-50 focus-visible:ring-stone-200;
+    }
+
+    .btn-danger {
+        @apply bg-red-600 text-white shadow-sm hover:bg-red-700 focus-visible:ring-red-200;
+    }
+
+    .btn-ghost {
+        @apply text-stone-600 hover:bg-stone-100 hover:text-stone-900 focus-visible:ring-stone-200;
+    }
+
+    .btn-sm {
+        @apply px-3 py-1.5 text-xs;
+    }
+
+    .input {
+        @apply w-full rounded-lg border border-stone-300 bg-white px-3.5 py-2.5 text-sm text-stone-900 shadow-xs transition placeholder:text-stone-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-100 focus:outline-none disabled:bg-stone-100;
+    }
+
+    .input-error {
+        @apply border-red-400 focus:border-red-500 focus:ring-red-100;
+    }
+
+    .label {
+        @apply mb-1.5 block text-sm font-medium text-stone-700;
+    }
+
+    .field-error {
+        @apply mt-1.5 text-xs font-medium text-red-600;
+    }
+
+    .card {
+        @apply rounded-2xl border border-stone-200 bg-white shadow-xs;
+    }
+
+    .eyebrow {
+        @apply text-xs font-semibold tracking-[0.18em] text-brand-600 uppercase;
+    }
+}
